@@ -157,7 +157,7 @@ export default function TopCoachApp() {
       avatar: "/ai-coach-avatar.png",
       replies: 87,
       views: 432,
-      lastActivity: new Date(Date.now() - 30 * 60 * 1000),
+      lastActivity: new Date(Date.now() - 30 * 1000),
       category: "Challenges",
       isPinned: true,
     },
@@ -759,7 +759,7 @@ export default function TopCoachApp() {
                       <Button variant="outline" size="sm">
                         Swap
                       </Button>
-                      {!exercise.completed && <Button className="gradient-red-silver">Start</Button>}
+                      {!exercise.completed && <Button className="bg-white text-black hover:bg-gray-100">Start</Button>}
                     </div>
                   </div>
                 </CardContent>

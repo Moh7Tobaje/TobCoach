@@ -235,21 +235,21 @@ export default function ChatPage() {
             </Button>
 
             <div className="flex-1 relative">
-              <Input
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Ask me anything about fitness, nutrition, or workouts..."
-                className="pr-12 bg-[#2d2e2e]/50 border-[#2d2e2e]/50 focus:border-[#e3372e]/50 text-white placeholder:text-[#2d2e2e] backdrop-blur-sm"
-                onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
-              />
               <Button
                 onClick={handleSendMessage}
                 size="icon"
-                className="absolute right-1 top-1 h-8 w-8 bg-[#e3372e] hover:bg-[#e3372e]/80 text-white"
+                className="absolute left-1 top-1 h-8 w-8 bg-[#e3372e] hover:bg-[#e3372e]/80 text-white z-10"
                 disabled={!inputValue.trim()}
               >
                 <Send className="h-4 w-4" />
               </Button>
+              <Input
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                placeholder="Ask me anything about fitness, nutrition, or workouts..."
+                className="pl-12 bg-[#2d2e2e]/50 border-[#2d2e2e]/50 focus:border-[#e3372e]/50 text-white placeholder:text-[#2d2e2e] backdrop-blur-sm"
+                onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
+              />
             </div>
 
             <Button variant="ghost" size="icon" className="hover:bg-[#e3372e]/20 flex-shrink-0 text-white">
